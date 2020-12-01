@@ -29,7 +29,7 @@
             <b>by_city=san_diego&sort=-name</b>
           </v-flex>
           <v-flex xs6 a>
-            <v-img
+            <v-img              
               align="center"
               v-model="mapurl"
               max-height="640"
@@ -82,7 +82,7 @@ export default {
         { text: "Phone", value: "phone" },
         { text: "Website", value: "website_url" },
       ],
-      mapurl: "",
+      mapurl: "https://i.redd.it/6jc3selm1cp31.jpg",
       query: "",
     };
   },
