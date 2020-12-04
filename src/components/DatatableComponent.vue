@@ -97,7 +97,7 @@ export default {
   methods: {
     handleClick(value) {
       this.mapurl =
-        "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&key=AIzaSyCHE34rABnps5MpdJCJP9VIvnAvreYwvc8&center=" +
+        "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&key=XXXXXXX=" +
         value.street +
         value.city +
         value.state;
