@@ -8,8 +8,7 @@
           <v-flex xs6>
             <v-text-field
               v-model="query"
-              label="Query:"
-              @input="up"
+              label="Query:"             
             ></v-text-field>
             <v-btn
               v-on:click="readDataFromAPI()"
@@ -96,13 +95,18 @@ export default {
   },
   methods: {
     handleClick(value) {
-      this.mapurl =
-        "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&key=XXXXXXX=" +
-        value.street +
-        value.city +
-        value.state;
 
-      console.log(this.mapurl);
+        let str = "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&key=";
+        str += process.env.VUE_APP_MAP_KEY;
+        str +=  "&center= "
+        str += value.street;
+        str +=  " ";
+        str += value.city;
+        str +=  " ";
+        str += value.state;
+
+      this.mapurl = str;
+
     },
     handleSubmit() {},
 
