@@ -117,11 +117,13 @@ export default {
       let pageNumber = page;
 
       axios
-        .get(
+        .get(  
           //   "http://localhost:50000/breweries" )
           // https://api.openbrewerydb.org/breweries?
 
-          "https://findbrewery.jbowl.dev/breweries?" +
+           process.env.VUE_APP_DISPATCH + "/breweries?" +
+
+          //"https://findbrewery.jbowl.dev/breweries?" +
             this.query +
             "&per_page=" +
             itemsPerPage +
